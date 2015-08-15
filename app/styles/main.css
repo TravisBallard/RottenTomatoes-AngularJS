@@ -317,6 +317,16 @@ header {
   display: block !important;
   opacity: 1; }
 
+.ng-enter {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  z-index: 8888; }
+
+.ng-leave {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  z-index: 9999; }
+
 /* media queries */
 @media screen and (max-width: 1400px) {
   .movie,

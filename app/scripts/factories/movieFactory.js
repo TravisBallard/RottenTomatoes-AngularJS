@@ -1,21 +1,31 @@
 'use strict';
-angular.module('rottentomatoes2App')
-	.factory('movieFactory', ['$http','$routeParams',function($http, $routeParams){
-
+angular
+	.module('rottentomatoes2App')
+	.factory('movieService', function($http, $window){
 		var factory = {};
-			factory.movie = {};
-			//movies = [];
+			factory.movies = [];
 
-		factory.getMovie = function(){
-			$http.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php').success(function(r){
-				r.movies.forEach(function(m){
-					if(m.id === $routeParams.id){
-						return m;
-					}
-				});
+		function getMovies() {
+			return $http
+					//.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php')
+					.get('api/ajax.php')
+					.then(function(r){
+						factory.movies = r.data.movies;
+						return factory.movies;
+					});
+
+		}
+
+		function getMovie(id) {
+
+			return getMovies().then(function(r){
+				factory.movies = r;
+				return $window._.find(factory.movies, {id: id});
 			});
+		}
 
-			return null;
+		return {
+			getMovies: getMovies,
+			getMovie: getMovie
 		};
-
-	}]);
+	});

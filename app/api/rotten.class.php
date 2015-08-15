@@ -6,7 +6,7 @@
 		const API_KEY = 'rvvdmt8tuucay37dadk8gza7';
 
 		private $results_per_page = 100;
-		private $result_limit = 2;//50;
+		private $result_limit = 50;
 		private $country = 'us';
 
 		private $current_results_page = 1;

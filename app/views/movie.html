@@ -1,7 +1,7 @@
 <div class="movie-details">
 	<div class="detail-image">
 		<img
-				src="{{  }}"
+				src="{{ movie.posters.profile }}"
 				alt="Minions Poster Image"
 				>
 	</div>
@@ -15,16 +15,16 @@
 			<li>
 				<strong>Runtime: </strong> {{ movie.runtime }}</li>
 			<li>
-				<strong>Release Date: </strong> {{ movie.release_date }}</li>
+				<strong>Release Date: </strong> {{ movie.release_dates.theater }}</li>
 		</ul>
 
 
 		<h4>Ratings</h4>
 		<ul>
 			<li>
-				<strong>Critics: </strong></li>
+				<strong>Critics: </strong>{{ movie.ratings.critics_rating }} ({{ movie.ratings.critics_score }})</li>
 			<li>
-				<strong>Audience: </strong></li>
+				<strong>Audience: </strong>{{ movie.ratings.audience_rating }} ({{ movie.ratings.audience_score }})</li>
 
 		</ul>
 
