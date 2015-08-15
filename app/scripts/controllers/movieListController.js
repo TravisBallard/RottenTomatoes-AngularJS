@@ -43,9 +43,13 @@
 //  ]);
 
 angular.module('rottentomatoes2App')
-	.controller( 'movieListController', ['$scope','$http',function($scope,$http){
-		$http.get('api/ajax.php').success(function(r){
+	.controller( 'movieListController', ['$scope','$http', '$location', function($scope,$http,$location){
+		//$http.get('api/ajax.php').success(function(r){
+		$http.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php').success(function(r){
 			$scope.movies = r.movies;
-			console.log('Movies: ', r);
 		});
+
+		$scope.go = function(url){
+			$location.path(url);
+		}
 	}]);

@@ -6,9 +6,9 @@
         <div
           id="m_{{ movie.id }}"
           class="movie"
-          style="background-image: url('{{ movie.posters.profile }}');"
+          style="background-image: url({{ movie.posters.profile }});"
           ng-repeat="movie in movies"
-          ng-click="go('/movie/{{ movie.title }}')"
+          ng-click="go('/movie/{{ movie.id }}')"
          >
           <h2>{{ movie.title }}  ({{movie.year}})</h2>
           <div class="overlay animated"></div>

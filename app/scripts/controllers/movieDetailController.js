@@ -10,7 +10,7 @@ angular.module('rottentomatoes2App')
 				console.log( $scope.movie );
 			}
 
-			getMovie( $routeParams.movieTitle );
+			getMovie( $routeParams.id );
 
 		}
 	]);

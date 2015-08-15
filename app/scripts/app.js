@@ -23,7 +23,7 @@ angular
         controller: 'movieListController',
         controllerAs: 'main'
       })
-      .when('/movie/:movieTitle', {
+      .when('/movie/:id', {
         templateUrl: 'views/movie.html',
         controller: 'movieDetailController',
         controllerAs: 'movie'
