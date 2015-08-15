@@ -24,9 +24,7 @@ angular
 		}
 
 		function formatRuntime(runtime){
-			var output = '',
-
-				hours = Math.floor( runtime / 60),
+			var hours = Math.floor( runtime / 60),
 				minutes = ( runtime % 60 ),
 
 				hour_label = hours > 1 ? 'hours' : 'hour',
