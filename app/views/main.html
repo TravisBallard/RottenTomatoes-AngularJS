@@ -1,0 +1,23 @@
+<div class="container horizontal" id="grid3d">
+
+  <div class="grid-wrap">
+    <div class="grid">
+
+        <div
+          id="m_{{ movie.id }}"
+          class="movie"
+          style="background-image: url('{{ movie.posters.profile }}');"
+          ng-repeat="movie in movies"
+          ng-click="go('/movie/{{ movie.title }}')"
+         >
+          <h2>{{ movie.title }}  ({{movie.year}})</h2>
+          <div class="overlay animated"></div>
+          <p class="more-info animated">
+            <a href="#" class="animated" onclick="return false;">More Info</a>
+          </p>
+        </div>
+
+    </div>
+  </div>
+
+</div>s

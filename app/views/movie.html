@@ -1,0 +1,41 @@
+<div class="movie-details">
+	<div class="detail-image">
+		<img
+				src="{{  }}"
+				alt="Minions Poster Image"
+				>
+	</div>
+	<div class="detail-info">
+		<h2>{{ movie.title }}</h2>
+		<ul class="meta">
+			<li>
+				<strong>MPAA Rating: </strong> {{ movie.mpaa_rating }}</li>
+			<li>
+				<strong>Year: </strong> {{ movie.year }}</li>
+			<li>
+				<strong>Runtime: </strong> {{ movie.runtime }}</li>
+			<li>
+				<strong>Release Date: </strong> {{ movie.release_date }}</li>
+		</ul>
+
+
+		<h4>Ratings</h4>
+		<ul>
+			<li>
+				<strong>Critics: </strong></li>
+			<li>
+				<strong>Audience: </strong></li>
+
+		</ul>
+
+		<h4>Synopsis</h4>
+		<p>{{ movie.synopsis }}</p>
+
+		<h4>Cast</h4>
+		<ul>
+			<li ng-repeat="actor in movie.abridged_cast">
+				<strong>{{ actor.name }}</strong> as {{ actor.characters[0] }}
+			</li>
+		</ul>
+	</div>
+</div>
