@@ -318,13 +318,11 @@ header {
   opacity: 1; }
 
 .ng-enter {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+  animation: slideInRight 0.5s both ease-in;
   z-index: 8888; }
 
 .ng-leave {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
+  animation: slideOutLeft 0.5s both ease-in;
   z-index: 9999; }
 
 /* media queries */
