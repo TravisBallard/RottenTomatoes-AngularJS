@@ -31,7 +31,7 @@
 		<p>{{ movie.synopsis }}</p>
 
 		<h4>Cast</h4>
-		<ul>
+		<ul class="cast">
 			<li data-ng-repeat="actor in movie.abridged_cast">
 				<strong>{{ actor.name }}</strong><span data-ng-show="actor.characters.length > 0"> as {{ actor.characters.join(', ') }}</span>
 			</li>

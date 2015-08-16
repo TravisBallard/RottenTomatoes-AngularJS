@@ -12,6 +12,8 @@ body {
   position: relative;
   background-color:$bgcolor;
   font-size:62.5%;
+  width:100%;
+  overflow-x:hidden;
 }
 
 .bg1 { background-color:#D4E6F7; }
@@ -25,6 +27,9 @@ body {
 header {
   background-color:white;
   padding:20px;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
 
   h1 {
     font-family:$headline_font;
@@ -398,6 +403,10 @@ header {
 .ng-leave {
   animation: slideOutLeft 0.5s both ease-in;
   z-index: 9999;
+}
+
+.cast li.ng-enter {
+  animation: none;
 }
 
 .search {
