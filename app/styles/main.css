@@ -346,14 +346,14 @@ header {
   .placeholder {
     height: 350px; }
 
-  header h1 {
-    padding-bottom: 60px; }
-
   div.search {
     top: 120px;
     left: 50%;
     right: auto;
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+
+  .page.home {
+    border-top: 50px solid white; } }
 @media screen and (max-width: 800px) {
   .movie,
   .placeholder {
