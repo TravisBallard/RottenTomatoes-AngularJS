@@ -315,6 +315,7 @@ header {
         color:#333;
         line-height:.9;
         margin-bottom:10px;
+        word-wrap:break-word;
       }
 
       .meta {
@@ -389,8 +390,15 @@ header {
   opacity: 1;
 }
 
-.ng-enter { animation: slideInRight 0.5s both ease-in; z-index: 8888; }
-.ng-leave { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
+.ng-enter {
+  animation: slideInRight 0.5s both ease-in;
+  z-index: 8888;
+}
+
+.ng-leave {
+  animation: slideOutLeft 0.5s both ease-in;
+  z-index: 9999;
+}
 
 .search {
   position:absolute;
@@ -414,6 +422,17 @@ header {
 @media screen and (max-width:1000px){
   .movie,
   .placeholder { height:350px; }
+
+  header h1 {
+    padding-bottom:60px;
+  }
+
+  div.search {
+    top:120px;
+    left:50%;
+    right:auto;
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (max-width:800px){
@@ -430,13 +449,23 @@ header {
     height:300px;
     width:33.333333%;
   }
-  .detail-image,
-  .detail-info {
-    width:100%;
+  .movie-details .detail-image,
+  .movie-details .detail-info {
+      width:100%;
+      padding:20px;
   }
 
-  .detail-image {
-    padding-right:40px;
+  .movie-details .detail-image {
+    margin:10px 0;
+  }
+
+  ul.meta {
+    margin-top:20px;
+  }
+
+  ul.meta li {
+    display:block;
+    width:100%;
   }
 }
 
