@@ -325,6 +325,16 @@ header {
   animation: slideOutLeft 0.5s both ease-in;
   z-index: 9999; }
 
+.search {
+  position: absolute;
+  top: 50px;
+  right: 50px; }
+  .search input {
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 2.4em;
+    padding: 5px 10px;
+    border: 1px solid #dfdfdf; }
+
 /* media queries */
 @media screen and (max-width: 1400px) {
   .movie,

@@ -1,9 +1,6 @@
 <div class="movie-details">
 	<div class="detail-image">
-		<img
-				src="{{ movie.posters.full }}"
-				alt="Minions Poster Image"
-				>
+		<img ng-src="{{ movie.posters.full }}" alt="{{ movie.title }} poster image">
 	</div>
 	<div class="detail-info">
 		<h2>{{ movie.title }}</h2>
@@ -22,9 +19,11 @@
 		<h4>Ratings</h4>
 		<ul>
 			<li>
-				<strong>Critics: </strong>{{ movie.ratings.critics_rating }} ({{ movie.ratings.critics_score }})</li>
+				<strong>Critics: </strong>{{ movie.ratings.critics_rating }} ({{ movie.ratings.critics_score }})
+			</li>
 			<li>
-				<strong>Audience: </strong>{{ movie.ratings.audience_rating }} ({{ movie.ratings.audience_score }})</li>
+				<strong>Audience: </strong>{{ movie.ratings.audience_rating }} ({{ movie.ratings.audience_score }})
+			</li>
 
 		</ul>
 
@@ -33,8 +32,8 @@
 
 		<h4>Cast</h4>
 		<ul>
-			<li ng-repeat="actor in movie.abridged_cast">
-				<strong>{{ actor.name }}</strong> as {{ actor.characters[0] }}
+			<li data-ng-repeat="actor in movie.abridged_cast">
+				<strong>{{ actor.name }}</strong><span data-ng-show="actor.characters.length > 0"> as {{ actor.characters.join(', ') }}</span>
 			</li>
 		</ul>
 	</div>

@@ -12,6 +12,11 @@ angular
 				$location.path(url);
 			};
 
+			$scope.stripFlixster = function(url){
+				return movieService.stripFlixster(url);
+			};
+
 			$scope.page = 'home';
+			$scope.bgcolors = ['bg1', 'bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7'];
 		}
 	]);

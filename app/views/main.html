@@ -1,16 +1,20 @@
+<div class="search" data-ng-show="true" data-page="{{ page }}">
+    <input type="text" placeholder="search movies" data-ng-model="q">
+</div>
+
 <div class="container horizontal" id="grid3d">
 
   <div class="grid-wrap">
     <div class="grid">
-
+        <!--style="background-image: url({{ stripFlixster(movie.posters.profile) }});"-->
         <div
           id="m_{{ movie.id }}"
           class="movie"
           style="background-image: url({{ movie.posters.profile }});"
-          ng-repeat="movie in movies"
+          ng-repeat="movie in movies | movieFilter:q"
           ng-click="go('/movie/{{ movie.id }}')"
          >
-          <h2>{{ movie.title }}  ({{movie.year}})</h2>
+          <h2 class="{{bgcolors[$index % bgcolors.length]}}">{{ movie.title }}  ({{movie.year}})</h2>
           <div class="overlay animated"></div>
           <p class="more-info animated">
             <a href="#" class="animated" onclick="return false;">More Info</a>
@@ -20,4 +24,4 @@
     </div>
   </div>
 
-</div>s
+</div>

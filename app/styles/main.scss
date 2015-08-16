@@ -392,6 +392,18 @@ header {
 .ng-enter { animation: slideInRight 0.5s both ease-in; z-index: 8888; }
 .ng-leave { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
 
+.search {
+  position:absolute;
+  top:50px;
+  right:50px;
+
+  input {
+    font-family: $body_font;
+    font-size: 2.4em;
+    padding: 5px 10px;
+    border: 1px solid #dfdfdf;
+  }
+}
 
 /* media queries */
 @media screen and (max-width:1400px){
