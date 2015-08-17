@@ -1,6 +1,6 @@
-<div class="movie-details">
+<div class="movie-details animated fadeInDown">
 	<div class="detail-image">
-		<img ng-src="{{ movie.posters.full }}" alt="{{ movie.title }} poster image">
+		<img ng-src="{{ movie.posters.profile | stripFlixster }}" alt="{{ movie.title }} poster image">
 	</div>
 	<div class="detail-info">
 		<h2>{{ movie.title }}</h2>
@@ -10,7 +10,7 @@
 			<li>
 				<strong>Year: </strong> {{ movie.year }}</li>
 			<li>
-				<strong>Runtime: </strong> {{ movie.runtime }}</li>
+				<strong>Runtime: </strong> {{ movie.runtime | formatRuntime }}</li>
 			<li>
 				<strong>Release Date: </strong> {{ movie.release_dates.theater }}</li>
 		</ul>
