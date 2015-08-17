@@ -8,8 +8,8 @@ angular.module('rottentomatoes2App')
 
 		function getMovies() {
 			return $http
-					.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php')
-					//.get('api/ajax.php')
+					//.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php')
+					.get('api/ajax.php')
 					.then(function(r){
 						factory.movies = r.data.movies;
 						return factory.movies;

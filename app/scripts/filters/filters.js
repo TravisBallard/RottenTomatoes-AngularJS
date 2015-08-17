@@ -26,7 +26,7 @@ angular.module('filters',['utils'])
 
 			return (hours > 0 ? hours + ' ' + hour_label : '') +
 					(minutes > 0 ? ' ' + minutes + ' ' + minute_label : '');
-		}
+		};
 	})
 
 	.filter('stripFlixster', function(){
@@ -37,5 +37,5 @@ angular.module('filters',['utils'])
 			}
 
 			return output;
-		}
+		};
 	});
