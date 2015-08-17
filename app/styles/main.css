@@ -48,150 +48,26 @@ header {
   margin: 0;
   width: 100%;
   padding: 20px;
-  box-sizing: border-box;
-  -webkit-perspective: 1500px;
-  perspective: 1500px; }
-
-.view-full .grid {
-  -webkit-transform: translateZ(-1500px);
-  transform: translateZ(-1500px); }
-.view-full .placeholder {
-  -webkit-transition: all 0.5s 0.1s cubic-bezier(0, 0, 0.25, 1);
-  transition: all 0.5s 0.1s cubic-bezier(0, 0, 0.25, 1);
-  -webkit-transform: translateZ(1500px) rotateY(-179.9deg);
-  transform: translateZ(1500px) rotateY(-179.9deg); }
+  box-sizing: border-box; }
 
 .grid {
   position: relative;
-  -webkit-transition: all 0.5s cubic-bezier(0, 0, 0.25, 1);
-  transition: all 0.5s cubic-bezier(0, 0, 0.25, 1);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
-  .grid .placeholder {
-    pointer-events: none;
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
-    .grid .placeholder > div {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
-    .grid .placeholder .front {
-      width: 100%;
-      height: 100%;
-      background-color: #999; }
-    .grid .placeholder .back {
-      background: white;
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
-
-.content,
-.loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none; }
-
-.content {
-  overflow-y: scroll;
-  height: 0;
-  background: #fff;
-  visibility: hidden;
-  z-index: 400;
-  -webkit-overflow-scrolling: touch; }
-  .content.show {
-    height: auto;
-    pointer-events: auto;
-    visibility: visible; }
-  .content > div {
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 0;
-    opacity: 0;
-    background: #fff; }
-    .content > div.show {
-      height: auto;
-      opacity: 1;
-      -webkit-transition: opacity 0.6s;
-      transition: opacity 0.6s; }
-      .content > div.show ~ .close-content {
-        opacity: 1;
-        pointer-events: auto;
-        display: inline-block; }
-
-.loading {
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-  background: transparent url(../../i/preloader.gif) no-repeat center center;
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: opacity 0.5s, transform 0.5s; }
-  .loading.show {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-
-.close-content {
-  position: fixed;
-  z-index: 1000;
-  top: 20px;
-  right: 20px;
-  color: #aaa;
-  cursor: pointer;
-  pointer-events: none;
-  padding: 1em;
-  opacity: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  background: transparent url(../../i/close.png) 0 0 no-repeat;
-  background-size: contain; }
-  .close-content:hover {
-    color: #999; }
 
 /* movies */
-.movie,
-.placeholder {
-  width: 20%;
-  height: 400px; }
-
 .movie {
+  width: 20%;
+  height: 400px;
   position: relative;
   display: inline-block;
   cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background-size: cover;
   border: 10px solid;
   border-color: #e7e7e7;
   box-sizing: border-box;
   background-color: #999; }
-  .movie.active {
-    opacity: 0; }
   .movie:hover {
     border: none; }
     .movie:hover .overlay,
@@ -292,37 +168,6 @@ header {
         font-size: 1.6em;
         line-height: 2; }
 
-/* Simple fallback */
-/* if any of these are not supported, a simple fallback will be shown */
-.no-pointerevents .content,
-.no-csstransforms3d .content,
-.no-csstransitions .content,
-.no-pointerevents .content > div,
-.no-csstransforms3d .content > div,
-.no-csstransitions .content > div,
-.no-pointerevents .close-content,
-.no-csstransforms3d .close-content,
-.no-csstransitions .close-content {
-  opacity: 1;
-  visibility: visible;
-  display: none;
-  height: auto; }
-
-.no-pointerevents .show .close-content,
-.no-csstransforms3d .show .close-content,
-.no-csstransition .show .close-content,
-.no-pointerevents div.show,
-.no-csstransforms3d div.show,
-.no-csstransitions div.show,
-.no-csstransitions .dummy-img,
-.no-csstransitions .dummy-text,
-.no-csstransforms3d .dummy-img,
-.no-csstransforms3d .dummy-text,
-.no-pointerevents .dummy-img,
-.no-pointerevents .dummy-text {
-  display: block !important;
-  opacity: 1; }
-
 .ng-enter {
   animation: slideInRight 0.5s both ease-in;
   z-index: 8888; }
@@ -346,12 +191,10 @@ header {
 
 /* media queries */
 @media screen and (max-width: 1400px) {
-  .movie,
-  .placeholder {
+  .movie {
     height: 400px; } }
 @media screen and (max-width: 1000px) {
-  .movie,
-  .placeholder {
+  .movie {
     height: 350px; }
 
   div.search {
@@ -363,13 +206,11 @@ header {
   .page.home {
     border-top: 50px solid white; } }
 @media screen and (max-width: 800px) {
-  .movie,
-  .placeholder {
+  .movie {
     height: 325px;
     width: 25%; } }
 @media screen and (max-width: 720px) {
-  .movie,
-  .placeholder {
+  .movie {
     height: 300px;
     width: 33.333333%; }
 
@@ -388,8 +229,7 @@ header {
     display: block;
     width: 100%; } }
 @media screen and (max-width: 640px) {
-  .movie,
-  .placeholder {
+  .movie {
     height: 225px;
     width: 50%; } }
 

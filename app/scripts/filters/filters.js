@@ -19,13 +19,13 @@ angular.module('filters',['utils'])
 		return function(runtime){
 
 			var hours = Math.floor( runtime / 60),
-					minutes = ( runtime % 60 ),
+				minutes = ( runtime % 60 ),
 
-					hour_label = hours > 1 ? 'hours' : 'hour',
-					minute_label = minutes > 1 ? 'minutes' : 'minute';
+				hour_label = hours > 1 ? 'hours' : 'hour',
+				minute_label = minutes > 1 ? 'minutes' : 'minute';
 
 			return (hours > 0 ? hours + ' ' + hour_label : '') +
-					(minutes > 0 ? ' ' + minutes + ' ' + minute_label : '');
+				   (minutes > 0 ? ' ' + minutes + ' ' + minute_label : '');
 		};
 	})
 
