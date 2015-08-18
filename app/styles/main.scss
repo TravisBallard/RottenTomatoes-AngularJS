@@ -4,16 +4,16 @@ $headline_font: 'Montserrat', arial, sans-serif;
 $body_font: 'Roboto', arial, sans-serif;
 
 * {
-  margin:0;
-  padding:0;
+	margin:0;
+	padding:0;
 }
 
 body {
-  position: relative;
-  background-color:$bgcolor;
-  font-size:62.5%;
-  width:100%;
-  overflow-x:hidden;
+	position: relative;
+	background-color:$bgcolor;
+	font-size:62.5%;
+	width:100%;
+	overflow-x:hidden;
 }
 
 .bg1 { background-color:#D4E6F7; }
@@ -25,35 +25,35 @@ body {
 .bg7 { background-color:#F9E0C7; }
 
 header {
-  background-color:white;
-  padding:20px;
-  width:100%;
-  max-width:100%;
-  box-sizing:border-box;
+	background-color:white;
+	padding:20px;
+	width:100%;
+	max-width:100%;
+	box-sizing:border-box;
 
-  h1 {
-    font-family:$headline_font;
-    font-size:8em;
-    text-align:center;
-  }
+	h1 {
+		font-family:$headline_font;
+		font-size:8em;
+		text-align:center;
+	}
 }
 
 .noscroll {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .grid-wrap {
-  margin: 0;
-  width: 100%;
-  padding: 20px;
-  box-sizing:border-box;
+	margin: 0;
+	width: 100%;
+	padding: 20px;
+	box-sizing:border-box;
 }
 
 .grid {
-  position: relative;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+	position: relative;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 /* movies */
@@ -235,13 +235,7 @@ header {
 }
 
 /* media queries */
-@media screen and (max-width:1400px){
-	.movie { height:400px; }
-}
-
 @media screen and (max-width:1000px){
-	.movie { height:350px; }
-
 	div.search {
 		top:120px;
 		left:50%;
@@ -256,14 +250,12 @@ header {
 
 @media screen and (max-width:800px){
 	.movie {
-		height:325px;
 		width:25%;
 	}
 }
 
 @media screen and (max-width:720px){
 	.movie {
-		height:300px;
 		width:33.333333%;
 	}
 	.movie-details .detail-image,
@@ -287,8 +279,7 @@ header {
 }
 
 @media screen and (max-width:640px){
-  .movie {
-    height:225px;
-    width:50%;
-  }
+	.movie {
+		width:50%;
+	}
 }

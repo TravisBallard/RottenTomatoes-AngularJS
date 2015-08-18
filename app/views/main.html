@@ -9,9 +9,11 @@
         <div
           id="m_{{ movie.id }}"
           class="movie"
-          style="background-image: url({{ movie.posters.profile }});"
+          style="background-image: url({{ movie.posters.profile | stripFlixster }});"
+          ng-style="resizeMovie()"
           ng-repeat="movie in movies | movieFilter:q"
           ng-click="go('/movie/{{ movie.id }}')"
+          resize
          >
           <h2 class="{{bgcolors[$index % bgcolors.length]}}">{{ movie.title }}  ({{movie.year}})</h2>
           <div class="overlay animated"></div>

@@ -190,13 +190,7 @@ header {
     border: 1px solid #dfdfdf; }
 
 /* media queries */
-@media screen and (max-width: 1400px) {
-  .movie {
-    height: 400px; } }
 @media screen and (max-width: 1000px) {
-  .movie {
-    height: 350px; }
-
   div.search {
     top: 120px;
     left: 50%;
@@ -207,11 +201,9 @@ header {
     border-top: 50px solid white; } }
 @media screen and (max-width: 800px) {
   .movie {
-    height: 325px;
     width: 25%; } }
 @media screen and (max-width: 720px) {
   .movie {
-    height: 300px;
     width: 33.333333%; }
 
   .movie-details .detail-image,
@@ -230,7 +222,6 @@ header {
     width: 100%; } }
 @media screen and (max-width: 640px) {
   .movie {
-    height: 225px;
     width: 50%; } }
 
 /*# sourceMappingURL=main.css.map */
