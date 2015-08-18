@@ -8,12 +8,12 @@ angular.module('rottentomatoes2App')
 
 		function getMovies() {
 			return $http
-					//.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php')
-					.get('api/ajax.php')
-					.then(function(r){
-						factory.movies = r.data.movies;
-						return factory.movies;
-					});
+				.get('http://localhost:8888/rottentomatoes-angular/dist/api/ajax.php', {cache: true})
+				//.get('api/ajax.php',{cache: true})
+				.then(function(r){
+					factory.movies = r.data.movies;
+					return factory.movies;
+				});
 		}
 
 		function getMovie(id) {

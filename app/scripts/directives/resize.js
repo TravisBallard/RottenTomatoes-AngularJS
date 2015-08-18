@@ -1,17 +1,17 @@
 "use strict";
 angular.module('rottentomatoes2App')
 	.directive('resize', function ($window) {
-		return function (scope, element, attr) {
+		return function(scope, element, attr) {
 
 			var $ = $window.$,
 				movie = $('.movie:first-child'),
 				w = angular.element($window);
 
-			scope.$watch(function () {
+			scope.$watch(function() {
 				return {
 					'w': movie.width()
 				};
-			}, function (newValue) {
+			}, function(newValue) {
 
 				scope.movieWidth = newValue.w;
 
@@ -32,7 +32,7 @@ angular.module('rottentomatoes2App')
 
 			}, true);
 
-			w.bind('resize', function () {
+			w.bind('resize', function() {
 				scope.$apply();
 			});
 		};
